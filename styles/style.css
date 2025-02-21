@@ -128,13 +128,37 @@ body {
     overflow: hidden;
     border-right: 3px solid var(--color-secundario);
     white-space: nowrap;
-    animation: typing 3s steps(30, end), blink-caret 0.5s step-end infinite;
+        margin: 0 auto; /* Centrado */
+    max-width: 90%; /* Previene desbordamiento */
+    animation: 
+        typing 3s steps(30, end), 
+        blink-caret 0.5s step-end infinite;
 }
 
 .hero-subtitle {
     font-size: 1.25rem;
     color: var(--color-secundario);
     letter-spacing: 1px;
+}
+
+/* Ajustes para móvil */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 1.8rem; /* Reducir tamaño */
+        animation: 
+            typing 2s steps(20, end), 
+            blink-caret 0.5s step-end infinite;
+    }
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--color-secundario) }
 }
 
 /* ===== Proyectos ===== */
