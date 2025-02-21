@@ -120,6 +120,11 @@ body {
     object-fit: cover;
 }
 
+.hero-content {
+    text-align: center;
+    overflow: hidden; /* Contiene el texto animado */
+}
+
 .hero-title {
     font-family: 'Montserrat', sans-serif;
     font-size: 2.5rem;
