@@ -125,6 +125,10 @@ body {
     font-size: 2.5rem;
     margin-bottom: 1rem;
     color: var(--color-primario);
+    overflow: hidden;
+    border-right: 3px solid var(--color-secundario);
+    white-space: nowrap;
+    animation: typing 3s steps(30, end), blink-caret 0.5s step-end infinite;
 }
 
 .hero-subtitle {
