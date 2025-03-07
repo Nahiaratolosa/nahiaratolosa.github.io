@@ -1,7 +1,7 @@
 /* ===== Variables ===== */
 :root {
     --color-primario: #2A2A2A;
-    --color-secundario: #F05454;
+    --color-secundario: #612663;
     --color-fondo: #F5F5F5;
     --color-texto: #333;
     --sombra: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -100,71 +100,195 @@ body {
 }
 
 /* ===== Hero ===== */
+/* ===== Hero Mejorado ===== */
 .hero {
-    margin-top: 80px;
+    margin-top: 50px;
     min-height: 90vh;
-    display: flex;
+    padding: 4rem 2rem;
+    display: grid;
     align-items: center;
-    justify-content: center;
-    padding: 2rem;
-    text-align: center;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(45deg, var(--color-fondo) 60%, rgba(84,89,240,0.1));
 }
 
-.hero-avatar {
-    width: 220px;
-    height: 220px;
+.hero::before {
+    content: '';
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: var(--color-secundario);
+    opacity: 0.05;
     border-radius: 50%;
-    border: 5px solid white;
-    box-shadow: var(--sombra);
-    margin-bottom: 2rem;
-    object-fit: cover;
+    right: -10%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+    animation: float 8s ease-in-out infinite;
 }
 
 .hero-content {
-    text-align: center;
-    overflow: hidden; /* Contiene el texto animado */
+    max-width: 800px;
+    position: relative;
+}
+
+.hero-avatar {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    border: 8px solid white;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    justify-self: center;
+}
+
+.hero-avatar:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.2);
 }
 
 .hero-title {
     font-family: 'Montserrat', sans-serif;
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: var(--color-primario);
-    overflow: hidden;
-    border-right: 3px solid var(--color-secundario);
-    white-space: nowrap;
-        margin: 0 auto; /* Centrado */
-    max-width: 90%; /* Previene desbordamiento */
-    animation: 
-        typing 3s steps(30, end), 
-        blink-caret 0.5s step-end infinite;
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+    background: linear-gradient(45deg, var(--color-primario) 30%, var(--color-secundario));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    display: inline-block;
+}
+
+.hero-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: var(--color-secundario);
+    border-radius: 2px;
 }
 
 .hero-subtitle {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
+    color: var(--color-primario);
+    letter-spacing: 0.5px;
+    margin-bottom: 2rem;
+    position: relative;
+    padding-left: 2rem;
+}
+
+.hero-subtitle::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.5rem;
+    height: 3px;
+    background: var(--color-secundario);
+}
+
+.hero-cta {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+/* Añade esto al final de la sección Hero */
+.hero a {
+    text-decoration: none;
+    border: none;
+}
+
+.hero-subtitle::before {
+    background: var(--color-secundario); /* Asegurar que solo sea la línea del subtítulo */
+}
+
+.cta-button {
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.cta-primary {
+    background: var(--color-secundario);
+    color: white;
+    box-shadow: 0 10px 20px rgba(84,89,240,0.3);
+}
+
+.cta-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(84,89,240,0.4);
+}
+
+.cta-secondary {
+    border: 2px solid var(--color-secundario);
     color: var(--color-secundario);
-    letter-spacing: 1px;
+    background: transparent;
 }
 
-/* Ajustes para móvil */
-@media (max-width: 768px) {
-    .hero-title {
-        font-size: 1.8rem; /* Reducir tamaño */
-        animation: 
-            typing 2s steps(20, end), 
-            blink-caret 0.5s step-end infinite;
-    }
+.cta-secondary:hover {
+    background: rgba(84,89,240,0.05);
+    transform: translateY(-3px);
 }
 
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
+/* === Corrección definitiva === */
+
+/* 1. Eliminar SOLO las líneas específicas (no todos los pseudoelementos) */
+.hero-title::after,
+.hero-subtitle::before {
+    display: none; /* Solo elimina estos elementos específicos */
 }
 
-@keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: var(--color-secundario) }
+
+
+.social-links {
+    position: absolute;
+    left: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    z-index: 2;
+    margin: 0;
+    padding: 0;
 }
+
+.social-link {
+    width: 40px;
+    height: 20px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--sombra);
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    transform: translateX(10px);
+    background: var(--color-secundario);
+    color: white;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(-50%) scale(1) rotate(0deg); }
+    50% { transform: translateY(-53%) scale(1.03) rotate(3deg); }
+}
+
+
+
+
 
 /* ===== Proyectos ===== */
 .proyectos {
@@ -235,6 +359,128 @@ body {
     padding: 0.25rem 0.75rem;
     border-radius: 20px;
     font-size: 0.75rem;
+}
+
+/* ===== Habilidades ===== */
+.habilidades {
+    padding: 4rem 2rem;
+    background: rgb(245, 245, 245);
+}
+
+.habilidad-categoria {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.habilidad-categoria h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--color-primario);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+/* Barras de Progreso */
+.software-list {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.skill-item {
+    margin-bottom: 1.5rem;
+}
+
+.skill-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-primario);
+    align-items: center;
+    padding: 0.5rem 0;
+}
+
+/* Añade esto en la sección de Habilidades */
+.skill-icon {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    margin-right: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.skill-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Por esto: */
+.skill-header .skill-icon {
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+.skill-bar {
+    height: 8px;
+    background: #f0f0f0;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative; /* Añade esto */
+}
+
+.skill-progress {
+    height: 100%;
+    background: var(--color-secundario);
+    border-radius: 4px;
+    position: absolute; /* Cambia de relative a absolute */
+    left: 0;
+    top: 0;
+    width: 0; /* Establece inicialmente en 0 */
+    transition: width 1.5s cubic-bezier(0.34, -0.55, 0.27, 1.20) 0.1s; /* Animación más dramática */
+}
+
+.skill-progress::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 3px;
+    background: rgba(255,255,255,0.3);
+}
+
+.skill-percent {
+    margin-left: auto;
+    font-weight: 600;
+    color: var(--color-secundario);
+}
+
+/* Tags de Habilidades */
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.skill-tag {
+    background: var(--color-secundario);
+    color: rgba(255, 255, 255, 0.893);
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.skill-tag:hover {
+    background: transparent;
+    color: var(--color-secundario);
+    border-color: var(--color-secundario);
+    transform: translateY(-2px);
+}
+
+/* Animación al aparecer */
+@keyframes progressAnimation {
+    from { width: 0; }
+    to { width: var(--target-width); }
 }
 
 /* ===== Lightbox ===== */
@@ -457,5 +703,114 @@ body {
         max-height: 60vh;
         object-fit: contain;
         margin: 0 auto;
+    }
+}
+
+/* 3. Asegurar visibilidad en desktop */
+@media (min-width: 1025px) {
+    .hero-content {
+        margin-left: 80px; /* Espacio para los iconos */
+    }
+    
+    .social-links {
+        left: 1.5rem; /* Acercar ligeramente al contenido */
+        gap: 2rem; /* Espacio vertical entre iconos */
+        animation: social-entrance 0.8s ease-out forwards;
+    }
+
+    .social-link {
+        margin: 10px 0; /* Margen interno superior/inferior */
+        padding: 12px; /* Espacio interno alrededor del icono */
+    }
+    
+    @keyframes social-entrance {
+        from { opacity: 0; transform: translateY(-50%) translateX(-20px); }
+        to { opacity: 1; transform: translateY(-50%) translateX(0); }
+    }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding-top: 6rem;
+    }
+    
+    .hero-content {
+        max-width: 100%;
+        margin-bottom: 3rem;
+    }
+    
+    .hero-avatar {
+        width: 300px;
+        height: 300px;
+        justify-self: center;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        padding-left: 0;
+        text-align: center;
+    }
+    
+    .hero-subtitle::before {
+        display: none;
+    }
+    
+    .hero-cta {
+        justify-content: center;
+    }
+    
+    .social-links {
+        position: static;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 3rem;
+        gap: 1.5rem; /* Espacio horizontal entre iconos */
+        margin: 2rem 0; /* Margen superior/inferior */
+        padding: 0 15px; /* Padding lateral para no pegarse a bordes */
+    }
+}
+    .social-link i {
+        color: white !important; /* Forzar color blanco */
+        font-size: 1.2rem; /* Tamaño óptimo para móvil */
+    }
+    
+    .social-link {
+        background: var(--color-secundario) !important;
+        box-shadow: 0 4px 12px rgba(84,89,240,0.3); /* Mejor contraste */
+        margin: 0 5px; /* Pequeño margen entre iconos */
+        padding: 10px; /* Espacio interno consistente */
+    }
+
+
+    /* 5. Estilo mejorado de iconos */
+.social-link {
+    width: 45px;
+    height: 45px;
+    background: rgba(255,255,255,0.9);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(84,89,240,0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-link:hover {
+    transform: scale(1.15) translateX(10px);
+    background: var(--color-secundario);
+    box-shadow: 0 8px 20px rgba(84,89,240,0.3);
+}
+
+/* Versión escritorio */
+@media (min-width: 1025px) {
+    .social-link i {
+        color: var(--color-primario); /* Color oscuro para contraste */
     }
 }
