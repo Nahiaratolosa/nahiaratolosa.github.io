@@ -2,39 +2,52 @@ document.addEventListener('DOMContentLoaded', () => {
     // Datos de proyectos
     const proyectos = [
         {
-            titulo: "Retratos a lapiz",
+            titulo: "Retrato a lapiz",
             imagenes: [
-                "images/proyectos/L1.webp",
-                "images/proyectos/L2.webp",
-                "images/proyectos/L3.webp",
-                "images/proyectos/L4.webp"
+                "images/proyectos/d1.webp"
             ],
             descripcion: " ",
             tags: ["Retratos", "Rostros", "Claroscuro"]
         },
         {
-            titulo: "Abismo de Demonios",
+            titulo: "Kevin",
             imagenes: [
-                "images/proyectos/E2.webp"
+                "images/proyectos/d5.webp"
             ],
             descripcion: "",
-            tags: ["Pintura", "Acrilico", "Demonios"]
+            tags: ["Retratos", "Rostros", "Claroscuro"]
         },
         {
-            titulo: "La Antigüedad del Miedo",
+            titulo: "Edgar",
             imagenes: [
-                "images/proyectos/E1.webp"
+                "images/proyectos/d9.webp"
             ],
             descripcion: "",
-            tags: ["Pintura", "Acrilico", "Calaveras", "Miedo"]
+            tags: ["Retratos", "Rostros", "Claroscuro"]
         },
         {
-            titulo: "Desnudo T[etrico",
+            titulo: "Onai",
             imagenes: [
-                "images/proyectos/Desnudo1.webp"
+                "images/proyectos/d2.webp"
             ],
             descripcion: "",
-            tags: ["Pintura", "Acrilico", "Demonio", "Desnudo"]
+            tags: ["Retratos", "Rostros", "Claroscuro"]
+        },
+        {
+            titulo: "Retrato a Lapiz",
+            imagenes: [
+                "images/proyectos/d6.webp"
+            ],
+            descripcion: "",
+            tags: ["Retratos", "Rostros", "Claroscuro"]
+        },
+        {
+            titulo: "Retrato a Lapiz",
+            imagenes: [
+                "images/proyectos/d4.webp"
+            ],
+            descripcion: "",
+            tags: ["Retratos", "Rostros", "Claroscuro"]
         }
     ];
 
