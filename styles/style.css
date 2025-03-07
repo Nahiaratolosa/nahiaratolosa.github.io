@@ -1,7 +1,7 @@
 /* ===== Variables ===== */
 :root {
-    --color-primario: #2A2A2A;
-    --color-secundario: #612663;
+    --color-primario: #404040;
+    --color-secundario: #a623b5;
     --color-fondo: #F5F5F5;
     --color-texto: #333;
     --sombra: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -150,7 +150,7 @@ body {
 
 .hero-title {
     font-family: 'Montserrat', sans-serif;
-    font-size: 3.5rem;
+    font-size: 3.0rem;
     margin-bottom: 1.5rem;
     line-height: 1.1;
     background: linear-gradient(45deg, var(--color-primario) 30%, var(--color-secundario));
