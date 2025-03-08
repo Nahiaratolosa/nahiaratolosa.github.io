@@ -156,6 +156,9 @@ document.addEventListener('DOMContentLoaded', () => {
         },
     ];
 
+    document.addEventListener('contextmenu', (e) => e.preventDefault());
+    document.addEventListener('dragstart', (e) => e.preventDefault());
+
     // Generar proyectos
     const gridProyectos = document.querySelector('.proyectos-grid');
     
