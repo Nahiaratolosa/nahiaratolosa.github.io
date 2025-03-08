@@ -6,11 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
             imagenes: [
                 "images/proyectos/d1.webp"
             ],
-            descripcion:
-                "Título: La antigüedad del miedo",
-                "Medidas:198 x 148 cm",
-                "Técnica: Acrílico / Lienzo",
-                "Año: 2024",
+            descripcion: "",
             tags: ["Retratos", "Rostros", "Claroscuro"]
         },
         {
@@ -58,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
             imagenes: [
                 "images/proyectos/pi2.webp"
             ],
-            descripcion: " ",
+            descripcion: "Título: La antigüedad del miedo Medidas:198 x 148 cm Técnica: Acrílico / Lienzo Año: 2024",
             tags: ["Retratos", "Rostros", "Claroscuro"]
         },
         {
