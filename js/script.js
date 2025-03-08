@@ -48,7 +48,112 @@ document.addEventListener('DOMContentLoaded', () => {
             ],
             descripcion: "",
             tags: ["Retratos", "Rostros", "Claroscuro"]
-        }
+        },
+        {
+            titulo: "Pintura",
+            imagenes: [
+                "images/proyectos/pi2.webp"
+            ],
+            descripcion: " ",
+            tags: ["Retratos", "Rostros", "Claroscuro"]
+        },
+        {
+            titulo: "Pintura",
+            imagenes: [
+                "images/proyectos/pi3.webp"
+            ],
+            descripcion: "",
+            tags: ["Retratos", "Rostros", "Claroscuro"]
+        },
+        {
+            titulo: "Pintura",
+            imagenes: [
+                "images/proyectos/pi4.webp"
+            ],
+            descripcion: "",
+            tags: ["Retratos", "Rostros", "Claroscuro"]
+        },
+        {
+            titulo: "Pintura",
+            imagenes: [
+                "images/proyectos/pi5.webp"
+            ],
+            descripcion: "",
+            tags: ["Retratos", "Rostros", "Claroscuro"]
+        },
+        {
+            titulo: "Pintura",
+            imagenes: [
+                "images/proyectos/pi6.webp"
+            ],
+            descripcion: "",
+            tags: ["Retratos", "Rostros", "Claroscuro"]
+        },
+        {
+            titulo: "Pintura",
+            imagenes: [
+                "images/proyectos/pi7.webp"
+            ],
+            descripcion: "",
+            tags: ["Retratos", "Rostros", "Claroscuro"]
+        },
+        {
+            titulo: "Pintura",
+            imagenes: [
+                "images/proyectos/pi8.webp"
+            ],
+            descripcion: "",
+            tags: ["Retratos", "Rostros", "Claroscuro"]
+        },
+        {
+            titulo: "Pintura",
+            imagenes: [
+                "images/proyectos/pi9.webp"
+            ],
+            descripcion: "",
+            tags: ["Retratos", "Rostros", "Claroscuro"]
+        },
+        {
+            titulo: "Pintura",
+            imagenes: [
+                "images/proyectos/pi10.webp"
+            ],
+            descripcion: "",
+            tags: ["Retratos", "Rostros", "Claroscuro"]
+        },
+        {
+            titulo: "Pintura",
+            imagenes: [
+                "images/proyectos/pi11.webp"
+            ],
+            descripcion: "",
+            tags: ["Retratos", "Rostros", "Claroscuro"]
+        },
+        {
+            titulo: "Pintura",
+            imagenes: [
+                "images/proyectos/pi12.webp"
+            ],
+            descripcion: "",
+            tags: ["Retratos", "Rostros", "Claroscuro"]
+        },
+        {
+            titulo: "Pintura",
+            imagenes: [
+                "images/proyectos/pi13.webp"
+            ],
+            descripcion: "",
+            tags: ["Retratos", "Rostros", "Claroscuro"]
+        },
+        {
+            titulo: "Pintura",
+            imagenes: [
+                "images/proyectos/pi14.1.webp",
+                "images/proyectos/pi14.2.webp"
+            ],
+            descripcion: "",
+            tags: ["Retratos", "Rostros", "Claroscuro"]
+        },
     ];
 
     // Generar proyectos
