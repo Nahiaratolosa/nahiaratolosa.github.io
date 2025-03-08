@@ -20,6 +20,11 @@ html {
     font-size: 16px;
 }
 
+img {
+  user-select: none;
+  pointer-events: none;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
