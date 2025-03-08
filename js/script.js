@@ -50,55 +50,55 @@ document.addEventListener('DOMContentLoaded', () => {
             tags: ["Retratos", "Rostros", "Claroscuro"]
         },
         {
-            titulo: "Pintura",
+            titulo: "La antigüedad del miedo",
             imagenes: [
                 "images/proyectos/pi2.webp"
             ],
-            descripcion: "Título: La antigüedad del miedo Medidas:198 x 148 cm Técnica: Acrílico / Lienzo Año: 2024",
+            descripcion: "Medidas:198 x 148 cm - Técnica: Acrílico / Lienzo - Año: 2024",
             tags: ["Retratos", "Rostros", "Claroscuro"]
         },
         {
-            titulo: "Pintura",
+            titulo: "En intimidad",
             imagenes: [
                 "images/proyectos/pi3.webp"
             ],
-            descripcion: "",
+            descripcion: "Medidas: 36 x 44 cm - Técnica: Acrílico / Lienzo - Año: 2017",
             tags: ["Retratos", "Rostros", "Claroscuro"]
         },
         {
-            titulo: "Pintura",
+            titulo: "La Cena",
             imagenes: [
                 "images/proyectos/pi4.webp"
             ],
-            descripcion: "",
+            descripcion: "Medidas: 110 x 138 cm - Técnica: Óleo / Tela - Año: 2017",
             tags: ["Retratos", "Rostros", "Claroscuro"]
         },
         {
-            titulo: "Pintura",
+            titulo: "Sin Nombre",
             imagenes: [
                 "images/proyectos/pi5.webp"
             ],
-            descripcion: "",
+            descripcion: "Técnica: Acrílico / Tela - Medidas: 90 x 105 cm - Año: 2025",
             tags: ["Retratos", "Rostros", "Claroscuro"]
         },
         {
-            titulo: "Pintura",
+            titulo: "Miradas extrañas",
             imagenes: [
                 "images/proyectos/pi6.webp"
             ],
-            descripcion: "",
+            descripcion: "Técnica: Acrílico / Tela - Medidas: 55,5 x 67,5 cm - Año: 2022",
             tags: ["Retratos", "Rostros", "Claroscuro"]
         },
         {
-            titulo: "Pintura",
+            titulo: "Habitación",
             imagenes: [
                 "images/proyectos/pi7.webp"
             ],
-            descripcion: "",
+            descripcion: "Técnica: Acrílico/lienzo - Medidas: 100cm x 100cm - Año: 2023",
             tags: ["Retratos", "Rostros", "Claroscuro"]
         },
         {
-            titulo: "Pintura",
+            titulo: "Sin Nombre",
             imagenes: [
                 "images/proyectos/pi8.webp"
             ],
@@ -106,52 +106,52 @@ document.addEventListener('DOMContentLoaded', () => {
             tags: ["Retratos", "Rostros", "Claroscuro"]
         },
         {
-            titulo: "Pintura",
+            titulo: "Mujer en el Pasillo",
             imagenes: [
                 "images/proyectos/pi9.webp"
             ],
-            descripcion: "",
+            descripcion: "Técnica: Óleo / Tela - Año: 2017",
             tags: ["Retratos", "Rostros", "Claroscuro"]
         },
         {
-            titulo: "Pintura",
+            titulo: "Estudio de Niña",
             imagenes: [
                 "images/proyectos/pi10.webp"
             ],
-            descripcion: "",
+            descripcion: "Técnica: Acrílico / Tela - Medidas: 16 x 17 cm - Año: 2024",
             tags: ["Retratos", "Rostros", "Claroscuro"]
         },
         {
-            titulo: "Pintura",
+            titulo: "Estudio de Anciano",
             imagenes: [
                 "images/proyectos/pi11.webp"
             ],
-            descripcion: "",
+            descripcion: "Técnica: Acrílico / Tela - Medidas: 11 x 14 cm - Año: 2024",
             tags: ["Retratos", "Rostros", "Claroscuro"]
         },
         {
-            titulo: "Pintura",
+            titulo: "Estudio de mujer",
             imagenes: [
                 "images/proyectos/pi12.webp"
             ],
-            descripcion: "",
+            descripcion: "Técnica: Acrílico / Tela - Medidas: 10 x 13 cm - Año: 2024",
             tags: ["Retratos", "Rostros", "Claroscuro"]
         },
         {
-            titulo: "Pintura",
+            titulo: "Dama de Compañia",
             imagenes: [
                 "images/proyectos/pi13.webp"
             ],
-            descripcion: "",
+            descripcion: "Técnica: Acrílico / tela - Medidas: 150 x 100cm - Año: 2023",
             tags: ["Retratos", "Rostros", "Claroscuro"]
         },
         {
-            titulo: "Pintura",
+            titulo: " Habitación 1 y 2",
             imagenes: [
                 "images/proyectos/pi14.1.webp",
                 "images/proyectos/pi14.2.webp"
             ],
-            descripcion: "",
+            descripcion: "Técnica: Acrílico / Tela - Medidas: 40 x 40 cm - Año: 2023",
             tags: ["Retratos", "Rostros", "Claroscuro"]
         },
     ];
