@@ -171,7 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 "images/proyectos/pi11.webp"
             ],
             descripcion: "Técnica: Acrílico / Tela - Medidas: 11 x 14 cm - Año: 2024",
-            tags: ["Retratos", "Rostros", "Claroscuro"]
+            tags: ["Pintura"]
         },
         {
             titulo: "Estudio de mujer",
