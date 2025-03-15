@@ -8,8 +8,18 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body { opacity: 0; overflow: hidden; }
+        body.loaded { opacity: 1; overflow: auto; transition: opacity 0.5s ease; }
+    </style>
 </head>
 <body>
+    <div class="preloader">
+        <div class="preloader-spinner">
+            <img src="images/Isotipo2.svg" alt="Cargando..." class="preloader-logo">
+            <div class="spinner"></div>
+        </div>
+    </div>
     <!-- Header -->
     <header class="main-header">
         <div class="header-content">
@@ -28,14 +38,14 @@
         <section class="hero">
         
             <div class="social-links">
-                <a href="https://hive.blog/@nahiaratolosa" class="social-link"><i class="fa-brands fa-hive"></i></a>
+                <a href="https://www.behance.net/edgarafernandezp" class="social-link"><i class="fab fa-behance"></i></a>
                 <a href="https://www.instagram.com/nahiaratolosa" class="social-link"><i class="fab fa-instagram"></i></a>
             </div>
 
      <div class="hero-content">   
             
-            <h1 class="hero-title">Artista Visual</h1>
-            <p class="hero-subtitle">Expresionismo y Neofigurativo</p>
+            <h1 class="hero-title">Artista Plástico & Visual</h1>
+            <p class="hero-subtitle">Expresionismo / Neofigurativo</p>
             
             <div class="hero-cta">
                 <a href="#proyectos" class="cta-button cta-primary">
@@ -55,8 +65,16 @@
     <!-- Proyectos -->
     <section class="proyectos" id="proyectos">
         <h2 class="section-title">Portafolio</h2>
+
+        <!-- Filtros -->
+    <div class="filtros-proyectos">
+        <!-- Los demás botones se generarán dinámicamente -->
+    </div>
+
         <div class="proyectos-grid"></div>
     </section>
+
+ 
 
         <!-- Modifica el lightbox así -->
     <div class="lightbox" id="lightbox">
