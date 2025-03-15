@@ -54,52 +54,52 @@ document.addEventListener('DOMContentLoaded', () => {
     // Datos de proyectos
     const proyectos = [
         {
-            titulo: "Retrato a lapiz",
+            titulo: "Retrato a lapiz I",
             imagenes: [
                 "images/proyectos/d1.webp"
             ],
             descripcion: "",
-            tags: ["Retratos", "Rostros", "Claroscuro"]
+            tags: ["Retratos"]
         },
         {
-            titulo: "Kevin",
+            titulo: "Retrato a lapiz II",
             imagenes: [
                 "images/proyectos/d5.webp"
             ],
             descripcion: "",
-            tags: ["Retratos", "Rostros", "Claroscuro"]
+            tags: ["Retratos"]
         },
         {
-            titulo: "Edgar",
+            titulo: "Retrato a lapiz III",
             imagenes: [
                 "images/proyectos/d9.webp"
             ],
             descripcion: "",
-            tags: ["Retratos", "Rostros", "Claroscuro"]
+            tags: ["Retratos"]
         },
         {
-            titulo: "Onai",
+            titulo: "Retrato a lapiz VI",
             imagenes: [
                 "images/proyectos/d2.webp"
             ],
             descripcion: "",
-            tags: ["Retratos", "Rostros", "Claroscuro"]
+            tags: ["Retratos"]
         },
         {
-            titulo: "Retrato a Lapiz",
+            titulo: "Retrato a lapiz V",
             imagenes: [
                 "images/proyectos/d6.webp"
             ],
             descripcion: "",
-            tags: ["Retratos", "Rostros", "Claroscuro"]
+            tags: ["Retratos"]
         },
         {
-            titulo: "Retrato a Lapiz",
+            titulo: "Retrato a lapiz VI",
             imagenes: [
                 "images/proyectos/d4.webp"
             ],
             descripcion: "",
-            tags: ["Retratos", "Rostros", "Claroscuro"]
+            tags: ["Retratos"]
         },
         {
             titulo: "La antigüedad del miedo",
@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 "images/proyectos/pi2.webp"
             ],
             descripcion: "Medidas:198 x 148 cm - Técnica: Acrílico / Lienzo - Año: 2024",
-            tags: ["Retratos", "Rostros", "Claroscuro"]
+            tags: ["Pintura"]
         },
         {
             titulo: "En intimidad",
@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 "images/proyectos/pi3.webp"
             ],
             descripcion: "Medidas: 36 x 44 cm - Técnica: Acrílico / Lienzo - Año: 2017",
-            tags: ["Retratos", "Rostros", "Claroscuro"]
+            tags: ["Pintura"]
         },
         {
             titulo: "La Cena",
@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 "images/proyectos/pi4.webp"
             ],
             descripcion: "Medidas: 110 x 138 cm - Técnica: Óleo / Tela - Año: 2017",
-            tags: ["Retratos", "Rostros", "Claroscuro"]
+            tags: ["Pintura"]
         },
         {
             titulo: "Sin Nombre",
@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 "images/proyectos/pi5.webp"
             ],
             descripcion: "Técnica: Acrílico / Tela - Medidas: 90 x 105 cm - Año: 2025",
-            tags: ["Retratos", "Rostros", "Claroscuro"]
+            tags: ["Pintura"]
         },
         {
             titulo: "Miradas extrañas",
@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 "images/proyectos/pi6.webp"
             ],
             descripcion: "Técnica: Acrílico / Tela - Medidas: 55,5 x 67,5 cm - Año: 2022",
-            tags: ["Retratos", "Rostros", "Claroscuro"]
+            tags: ["Pintura"]
         },
         {
             titulo: "Habitación",
@@ -147,15 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 "images/proyectos/pi7.webp"
             ],
             descripcion: "Técnica: Acrílico/lienzo - Medidas: 100cm x 100cm - Año: 2023",
-            tags: ["Retratos", "Rostros", "Claroscuro"]
-        },
-        {
-            titulo: "Sin Nombre",
-            imagenes: [
-                "images/proyectos/pi8.webp"
-            ],
-            descripcion: "",
-            tags: ["Retratos", "Rostros", "Claroscuro"]
+            tags: ["Pintura"]
         },
         {
             titulo: "Mujer en el Pasillo",
@@ -163,7 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 "images/proyectos/pi9.webp"
             ],
             descripcion: "Técnica: Óleo / Tela - Año: 2017",
-            tags: ["Retratos", "Rostros", "Claroscuro"]
+            tags: ["Pintura"]
         },
         {
             titulo: "Estudio de Niña",
@@ -171,7 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 "images/proyectos/pi10.webp"
             ],
             descripcion: "Técnica: Acrílico / Tela - Medidas: 16 x 17 cm - Año: 2024",
-            tags: ["Retratos", "Rostros", "Claroscuro"]
+            tags: ["Pintura"]
         },
         {
             titulo: "Estudio de Anciano",
@@ -187,7 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 "images/proyectos/pi12.webp"
             ],
             descripcion: "Técnica: Acrílico / Tela - Medidas: 10 x 13 cm - Año: 2024",
-            tags: ["Retratos", "Rostros", "Claroscuro"]
+            tags: ["Pintura"]
         },
         {
             titulo: "Dama de Compañia",
@@ -195,7 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 "images/proyectos/pi13.webp"
             ],
             descripcion: "Técnica: Acrílico / tela - Medidas: 150 x 100cm - Año: 2023",
-            tags: ["Retratos", "Rostros", "Claroscuro"]
+            tags: ["Pintura"]
         },
         {
             titulo: " Habitación 1 y 2",
@@ -204,7 +196,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 "images/proyectos/pi14.2.webp"
             ],
             descripcion: "Técnica: Acrílico / Tela - Medidas: 40 x 40 cm - Año: 2023",
-            tags: ["Retratos", "Rostros", "Claroscuro"]
+            tags: ["Pintura"]
         },
     ];
 
@@ -296,42 +288,6 @@ function filtrarProyectos(e) {
         });
     }, 100); // Tiempo igual a la duración de la animación de salida
 }
-
-    softwareSection.appendChild(softwareList);
-    gridHabilidades.appendChild(softwareSection);
-
-    // Habilidades profesionales con tags
-    const profSection = document.createElement('div');
-    profSection.className = 'habilidad-categoria';
-    profSection.innerHTML = '<h3>Especialidades Creativas</h3><div class="skill-tags"></div>';
-
-    habilidades.profesionales.forEach(habilidad => {
-        const tag = document.createElement('span');
-        tag.className = 'skill-tag';
-        tag.textContent = habilidad;
-        profSection.querySelector('.skill-tags').appendChild(tag);
-    });
-    gridHabilidades.appendChild(profSection);
-
-    // Animación de barras al hacer scroll
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const progressBars = entry.target.querySelectorAll('.skill-progress');
-                progressBars.forEach(bar => {
-                    const finalWidth = bar.parentElement.getAttribute('data-percent'); // Nuevo atributo
-                bar.style.width = finalWidth;
-            });
-        }
-    });
-}, { 
-    threshold: 0.5,
-    rootMargin: '0px 0px -100px 0px'
-});
-
-    document.querySelectorAll('.habilidad-categoria').forEach(section => {
-        observer.observe(section);
-    });
 
     // Generar proyectos
     const gridProyectos = document.querySelector('.proyectos-grid');
