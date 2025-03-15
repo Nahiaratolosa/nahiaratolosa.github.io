@@ -1,3 +1,55 @@
+let currentProjects = []; // Añade esto al inicio de tu JS
+// Preloader
+window.addEventListener('load', () => {
+    document.body.classList.add('loaded');
+    const preloader = document.querySelector('.preloader');
+    
+    // Agrega la clase hidden después de 1 segundo
+    setTimeout(() => {
+        preloader.classList.add('hidden');
+        
+        // Elimina el preloader del DOM después de la animación
+        preloader.addEventListener('transitionend', () => {
+            preloader.remove();
+        });
+    }, 1500);
+});
+
+// JavaScript para clonar automáticamente
+document.addEventListener('DOMContentLoaded', () => {
+    const track = document.querySelector('.slider-track');
+    const logos = document.querySelectorAll('.logo-item');
+    
+    // Clonar logos
+    logos.forEach(logo => {
+        const clone = logo.cloneNode(true);
+        track.appendChild(clone);
+    });
+    
+    // Reiniciar animación al finalizar
+    track.addEventListener('animationiteration', () => {
+        track.style.animation = 'none';
+        void track.offsetWidth;
+        track.style.animation = 'slide 200s linear infinite';
+    });
+});
+
+// Añade este JS para manejar toques precisos
+document.querySelectorAll('.logo-item').forEach(logo => {
+    let isTouching = false;
+    
+    logo.addEventListener('touchstart', () => {
+        isTouching = true;
+        logo.classList.add('active');
+    });
+    
+    logo.addEventListener('touchend', () => {
+        isTouching = false;
+        setTimeout(() => logo.classList.remove('active'), 200);
+    });
+});
+
+
 document.addEventListener('DOMContentLoaded', () => {
     // Datos de proyectos
     const proyectos = [
@@ -156,12 +208,134 @@ document.addEventListener('DOMContentLoaded', () => {
         },
     ];
 
-    document.addEventListener('contextmenu', (e) => e.preventDefault());
-    document.addEventListener('dragstart', (e) => e.preventDefault());
+     generarFiltros(); // Añade esta línea después de inicializar todo
+    filtrarProyectos({ target: document.querySelector('[data-tag="todos"]') }); // Mostrar todos al inicio
+
+    // Función para generar los botones de filtro
+function generarFiltros() {
+    const contenedorFiltros = document.querySelector('.filtros-proyectos');
+    const tagsUnicos = ['todos']; // Empezamos con el botón "Mostrar Todos"
+    
+    // Obtener tags únicos de todos los proyectos
+    proyectos.forEach(proyecto => {
+        proyecto.tags.forEach(tag => {
+            if (!tagsUnicos.includes(tag.toLowerCase())) {
+                tagsUnicos.push(tag.toLowerCase());
+            }
+        });
+    });
+
+    // Generar botones
+    tagsUnicos.forEach(tag => {
+        const boton = document.createElement('button');
+        boton.className = `filtro-btn ${tag === 'todos' ? 'active' : ''}`;
+        boton.dataset.tag = tag;
+        boton.textContent = tag === 'todos'
+            ? 'Mostrar Todos'
+            : tag.charAt(0).toUpperCase() + tag.slice(1);
+        contenedorFiltros.appendChild(boton);
+    });
+
+    // Event listeners para los botones
+    document.querySelectorAll('.filtro-btn').forEach(boton => {
+        boton.addEventListener('click', filtrarProyectos);
+    });
+}
+
+// Función para filtrar proyectos
+function filtrarProyectos(e) {
+    const tag = e.target.dataset.tag;
+    const grid = document.querySelector('.proyectos-grid');
+    const cards = document.querySelectorAll('.proyecto-card');
+
+    // Animación de salida
+    cards.forEach(card => {
+        card.classList.add('fade-out');
+    });
+    
+    // Actualizar botones activos con transición
+    document.querySelectorAll('.filtro-btn').forEach(boton => {
+        boton.classList.remove('active');
+    });
+    e.target.classList.add('active');
+
+    // Esperar a que termine la animación de salida
+    setTimeout(() => {
+        // Filtrar proyectos
+        const proyectosFiltrados = tag === 'todos' 
+            ? proyectos 
+            : proyectos.filter(proyecto => 
+                proyecto.tags.some(proyectoTag => 
+                    proyectoTag.toLowerCase() === tag
+                )
+            );
+
+        // Limpiar grid
+        grid.innerHTML = '';
+
+        // Generar nuevos proyectos con animación de entrada
+        proyectosFiltrados.forEach((proyecto, index) => {
+            const card = document.createElement('div');
+            card.className = 'proyecto-card';
+            card.innerHTML = `
+                <img src="${proyecto.imagenes[0]}" alt="${proyecto.titulo}">
+                <div class="card-content">
+                    <h3>${proyecto.titulo}</h3>
+                    <p>${proyecto.descripcion}</p>
+                    <div class="tags">${proyecto.tags.map(tag => `<span>${tag}</span>`).join('')}</div>
+                </div>
+            `;
+            
+            card.addEventListener('click', () => openLightbox(index, proyectosFiltrados));
+            
+            // Agregar animación de entrada
+            card.style.animation = `cardEntrance 0.5s ease ${index * 0.05}s forwards`;
+            card.style.opacity = '0';
+            
+            grid.appendChild(card);
+        });
+    }, 100); // Tiempo igual a la duración de la animación de salida
+}
+
+    softwareSection.appendChild(softwareList);
+    gridHabilidades.appendChild(softwareSection);
+
+    // Habilidades profesionales con tags
+    const profSection = document.createElement('div');
+    profSection.className = 'habilidad-categoria';
+    profSection.innerHTML = '<h3>Especialidades Creativas</h3><div class="skill-tags"></div>';
+
+    habilidades.profesionales.forEach(habilidad => {
+        const tag = document.createElement('span');
+        tag.className = 'skill-tag';
+        tag.textContent = habilidad;
+        profSection.querySelector('.skill-tags').appendChild(tag);
+    });
+    gridHabilidades.appendChild(profSection);
+
+    // Animación de barras al hacer scroll
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const progressBars = entry.target.querySelectorAll('.skill-progress');
+                progressBars.forEach(bar => {
+                    const finalWidth = bar.parentElement.getAttribute('data-percent'); // Nuevo atributo
+                bar.style.width = finalWidth;
+            });
+        }
+    });
+}, { 
+    threshold: 0.5,
+    rootMargin: '0px 0px -100px 0px'
+});
+
+    document.querySelectorAll('.habilidad-categoria').forEach(section => {
+        observer.observe(section);
+    });
 
     // Generar proyectos
     const gridProyectos = document.querySelector('.proyectos-grid');
-    
+
     proyectos.forEach((proyecto, index) => {
         const card = document.createElement('div');
         card.className = 'proyecto-card';
@@ -173,7 +347,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="tags">${proyecto.tags.map(tag => `<span>${tag}</span>`).join('')}</div>
             </div>
         `;
-        
+
         card.addEventListener('click', () => openLightbox(index));
         gridProyectos.appendChild(card);
     });
@@ -187,18 +361,24 @@ document.addEventListener('DOMContentLoaded', () => {
     let isDragging = false;
     let startPosX = 0;
 
-    function openLightbox(projectIndex) {
-        currentProjectIndex = projectIndex;
-        currentImageIndex = 0;
-        loadImages();
-        lightbox.classList.add('active');
+    // Modifica la función openLightbox para recibir la lista filtrada
+    function openLightbox(index, proyectosFiltrados = proyectos) {
+    currentProjectIndex = index;
+    currentProjects = proyectosFiltrados; // Nueva variable global
+    currentImageIndex = 0; // <- Añade esta línea
+    loadImages();
+    lightbox.classList.add('active');
     }
 
     function loadImages() {
-        const proyecto = proyectos[currentProjectIndex];
+        const proyecto = currentProjects[currentProjectIndex]; // ← Usar currentProjects
         slider.innerHTML = proyecto.imagenes.map(img => `
             <img src="${img}" alt="${proyecto.titulo}">
         `).join('');
+
+        // Añade estas líneas:
+        currentImageIndex = 0; // Doble seguro
+        slider.style.transform = 'translateX(0)'
         updateIndicators();
         updateSliderPosition();
     }
@@ -208,13 +388,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function updateIndicators() {
-        indicators.innerHTML = proyectos[currentProjectIndex].imagenes
+        indicators.innerHTML = currentProjects[currentProjectIndex].imagenes // ← currentProjects
             .map((_, i) => `<span class="${i === currentImageIndex ? 'active' : ''}"></span>`)
             .join('');
     }
 
+    // Actualiza la navegación del lightbox para usar currentProjects
     function navigate(direction) {
-        const total = proyectos[currentProjectIndex].imagenes.length;
+        const total = currentProjects[currentProjectIndex].imagenes.length; // ← currentProjects
         currentImageIndex = (currentImageIndex + direction + total) % total;
         updateSliderPosition();
         updateIndicators();
@@ -252,10 +433,10 @@ document.addEventListener('DOMContentLoaded', () => {
     function dragEnd(e) {
         if (!isDragging) return;
         isDragging = false;
-        
+
         const deltaX = (e.clientX || e.changedTouches[0].clientX) - startPosX;
         const threshold = slider.offsetWidth * 0.1;
-        
+
         if (Math.abs(deltaX) > threshold) {
             navigate(deltaX > 0 ? -1 : 1);
         } else {
@@ -271,7 +452,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (e.key === 'ArrowRight') navigate(1);
             if (e.key === 'Escape') lightbox.classList.remove('active');
         }
-    });    
+    });
 
     
 });
