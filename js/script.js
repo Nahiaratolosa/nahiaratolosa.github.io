@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
             tags: ["Pintura"]
         },
         {
-            titulo: "Sin Nombre",
+            titulo: "La Fogata",
             imagenes: [
                 "images/proyectos/pi5.webp"
             ],
